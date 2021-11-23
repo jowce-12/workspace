@@ -61,6 +61,32 @@ void mergesort(int *arr, int start, int end) {
 		arr[i] = temp_arr[i-start];
 	}
 }
+void quicksort(int *arr, int start, int end) {
+	int mid = (start + end) / 2; 
+	int pivot = start;
+	int left = start + 1;
+	int right = end;
+	if (start >= end) return;
+
+	while (left <= right) {
+		while (left <= right && arr[left] <= arr[pivot]) {
+			left++;
+		}
+		while (left <= right && arr[right] >= arr[pivot]) {
+			right--;
+		}
+
+		if (right < left) break;
+		else {
+			swap(&arr[right], &arr[left]);
+		}
+	}
+	swap(&arr[pivot], &arr[right]);
+
+	quicksort(arr, start, right -1);
+	quicksort(arr, right + 1, end);
+
+}
 int main(void) {
 	int a[ARRLEN];
 	for(int i=0;i<ARRLEN;i++)
@@ -71,7 +97,8 @@ int main(void) {
 	//bubblesort(a);
 	//selectionsort(a);
 	//insertionsort(a);
-	mergesort(a, 0, ARRLEN-1);
+	//mergesort(a, 0, ARRLEN-1);
+	quicksort(a,0,ARRLEN-1);
 
 	clock_t end_time = clock();
 	for (int i = 0; i < ARRLEN; i++) {
