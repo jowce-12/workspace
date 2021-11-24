@@ -87,6 +87,36 @@ void quicksort(int *arr, int start, int end) {
 	quicksort(arr, right + 1, end);
 
 }
+void quicksort2(int *arr, int start, int end) {
+	int leftarr[ARRLEN];
+	int rightarr[ARRLEN];
+	int leftidx = 0;
+	int rightidx = 0;
+	int pivot = arr[start];
+
+	if (start >= end) return;
+
+	for (int i = start+1; i <= end; i++) {
+		if (arr[i] <= pivot) {
+			leftarr[leftidx++] = arr[i];
+		}
+		else if (arr[i] > pivot) {
+			rightarr[rightidx++] = arr[i];
+		}
+	}
+
+	int i,j;
+	for (i = 0; i < leftidx; i++) {
+		arr[start + i] = leftarr[i];
+	}
+	arr[start + i] = pivot;
+	for (j=0; j < rightidx; j++) {
+		arr[start + i + j+1] = rightarr[j];
+	}
+
+	quicksort2(arr,start, start+i-1);
+	quicksort2(arr, start+i+1, end);
+}
 int main(void) {
 	int a[ARRLEN];
 	for(int i=0;i<ARRLEN;i++)
@@ -98,8 +128,8 @@ int main(void) {
 	//selectionsort(a);
 	//insertionsort(a);
 	//mergesort(a, 0, ARRLEN-1);
-	quicksort(a,0,ARRLEN-1);
-
+	//quicksort(a,0,ARRLEN-1);
+	quicksort2(a,0,ARRLEN-1);
 	clock_t end_time = clock();
 	for (int i = 0; i < ARRLEN; i++) {
 		printf("%d\n", a[i]);
