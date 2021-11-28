@@ -117,10 +117,63 @@ void quicksort2(int *arr, int start, int end) {
 	quicksort2(arr,start, start+i-1);
 	quicksort2(arr, start+i+1, end);
 }
+void heapsort(int *a) {
+	int node[ARRLEN + 1];
+
+	for (int i = 0; i < ARRLEN; i++) {// insert node
+		int idx_cur = i + 1;
+		int idx_prev = idx_cur;
+		node[idx_cur] = a[i];
+
+		while (node[idx_cur] >= node[idx_prev] && idx_cur > 0) {
+			if(node[idx_cur] != node[idx_prev]) swap(&node[idx_cur], &node[idx_prev]);
+			idx_prev = idx_cur;
+			idx_cur = idx_cur / 2;
+		}
+	}
+
+	int idx_last = ARRLEN;
+	int idx_head = 1;
+	int idx_cur = idx_head;
+	for (int i = 0; i < ARRLEN; i++) {// delete node
+		a[i] = node[idx_head];
+		swap(&node[idx_head], &node[idx_last]);
+		idx_last--;
+
+		idx_cur = idx_head;
+		while (idx_cur * 2 <= idx_last) {
+			if (idx_cur * 2 + 1 <= idx_last) {
+				if (node[idx_cur] < node[idx_cur * 2] && node[idx_cur] < node[idx_cur * 2 + 1]) {
+					break;
+				} else if (node[idx_cur * 2] <= node[idx_cur * 2 + 1]) {
+					swap(&node[idx_cur], &node[idx_cur * 2]);
+					idx_cur = idx_cur * 2;
+				}
+				else {
+					swap(&node[idx_cur], &node[idx_cur * 2 + 1]);
+					idx_cur = idx_cur * 2 + 1;
+				}
+			}
+			else {
+				if (node[idx_cur] < node[idx_cur * 2]) {
+					break;
+				}
+				else {
+					swap(&node[idx_cur], &node[idx_cur * 2]);
+					idx_cur = idx_cur * 2;
+				}
+			}
+		}
+	}
+	//  1 , 2 , 3, 4, 5, 6, 7
+}
 int main(void) {
 	int a[ARRLEN];
-	for(int i=0;i<ARRLEN;i++)
-		a[i] = rand()%101;
+
+	for (int i = 0; i < ARRLEN; i++) {
+		a[i] = rand() % 101;
+	}
+		
 
 	clock_t time = clock();
 
@@ -129,7 +182,10 @@ int main(void) {
 	//insertionsort(a);
 	//mergesort(a, 0, ARRLEN-1);
 	//quicksort(a,0,ARRLEN-1);
-	quicksort2(a,0,ARRLEN-1);
+	//quicksort2(a,0,ARRLEN-1);
+	heapsort(a);
+
+	
 	clock_t end_time = clock();
 	for (int i = 0; i < ARRLEN; i++) {
 		printf("%d\n", a[i]);
