@@ -167,6 +167,25 @@ void heapsort(int *a) {
 	}
 	//  1 , 2 , 3, 4, 5, 6, 7
 }
+void countingsort(int *a) {
+	int count[ARRLEN+1];
+
+	for (int i = 0; i < ARRLEN + 1; i++) {
+		count[i] = 0;
+	}
+	for (int i = 0; i < ARRLEN; i++) {
+		count[a[i]]++;
+	}
+
+	int count_num = 0;
+	for (int i = 0; i < ARRLEN; i++) {
+		int val = i;
+		int j = 0;
+		for (j = 0; j < count[val]; j++) {
+			a[count_num++] = val;
+		}
+	}
+}
 int main(void) {
 	int a[ARRLEN];
 
@@ -183,7 +202,8 @@ int main(void) {
 	//mergesort(a, 0, ARRLEN-1);
 	//quicksort(a,0,ARRLEN-1);
 	//quicksort2(a,0,ARRLEN-1);
-	heapsort(a);
+	//heapsort(a);
+	countingsort(a);
 
 	
 	clock_t end_time = clock();
