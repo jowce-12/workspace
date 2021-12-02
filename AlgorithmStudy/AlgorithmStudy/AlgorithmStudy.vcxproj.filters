@@ -13,14 +13,8 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fin">
-      <UniqueIdentifier>{a535b3c5-1f85-402b-9306-33182be5269d}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1431.cpp">
-      <Filter>Fin</Filter>
-    </ClCompile>
     <ClCompile Include="10989.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>

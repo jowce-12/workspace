@@ -5,6 +5,12 @@ VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgorithmStudy", "AlgorithmStudy\AlgorithmStudy.vcxproj", "{957061C0-705C-4704-9D59-525B8187F01A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fininsh_Algorithm", "Fininsh_Algorithm", "{7EE2E181-5946-4516-B54D-9F3B65822F01}"
+	ProjectSection(SolutionItems) = preProject
+		AlgorithmStudy\10989.cpp = AlgorithmStudy\10989.cpp
+		AlgorithmStudy\1431.cpp = AlgorithmStudy\1431.cpp
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
