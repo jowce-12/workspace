@@ -9,6 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fininsh_Algorithm", "Finins
 	ProjectSection(SolutionItems) = preProject
 		AlgorithmStudy\10989.cpp = AlgorithmStudy\10989.cpp
 		AlgorithmStudy\1431.cpp = AlgorithmStudy\1431.cpp
+		AlgorithmStudy\14852.cpp = AlgorithmStudy\14852.cpp
+		AlgorithmStudy\2133.cpp = AlgorithmStudy\2133.cpp
+		AlgorithmStudy\stack_test.cpp = AlgorithmStudy\stack_test.cpp
 	EndProjectSection
 EndProject
 Global
