@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AlgorithmStudy", "Algorithm
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fininsh_Algorithm", "Fininsh_Algorithm", "{7EE2E181-5946-4516-B54D-9F3B65822F01}"
 	ProjectSection(SolutionItems) = preProject
+		AlgorithmStudy\1007.cpp = AlgorithmStudy\1007.cpp
+		AlgorithmStudy\1007_sol.cpp = AlgorithmStudy\1007_sol.cpp
 		AlgorithmStudy\10989.cpp = AlgorithmStudy\10989.cpp
 		AlgorithmStudy\1431.cpp = AlgorithmStudy\1431.cpp
 		AlgorithmStudy\14852.cpp = AlgorithmStudy\14852.cpp
