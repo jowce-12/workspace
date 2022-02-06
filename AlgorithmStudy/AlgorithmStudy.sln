@@ -19,6 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fininsh_Algorithm", "Finins
 		AlgorithmStudy\14852.cpp = AlgorithmStudy\14852.cpp
 		AlgorithmStudy\1509.cpp = AlgorithmStudy\1509.cpp
 		AlgorithmStudy\1509_dp.cpp = AlgorithmStudy\1509_dp.cpp
+		AlgorithmStudy\1562_dp.cpp = AlgorithmStudy\1562_dp.cpp
 		AlgorithmStudy\2133.cpp = AlgorithmStudy\2133.cpp
 		AlgorithmStudy\primenumber.cpp = AlgorithmStudy\primenumber.cpp
 		AlgorithmStudy\stack_test.cpp = AlgorithmStudy\stack_test.cpp
