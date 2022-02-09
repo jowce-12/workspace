@@ -3,7 +3,7 @@
 using namespace::std;
 // 1 <= N <= 4000000
 #define MAX 4000001
-int numlist[MAX];
+bool numlist[MAX];
 int primenum[MAX];
 int tos = -1;
 
@@ -18,18 +18,32 @@ int main(void) {
 	int N;
 	cin >> N;
 
-	numlist[0] = numlist[1] = 1;
-	for (int num = 2; num <= sqrt(N); num++) { // sieve of eratosthenes
-		if (numlist[num] == 0) primenum[++tos] = num;
+	numlist[0] = numlist[1] = true;
 
-		for (int j = num; j <= N; j = j + num) {
-			numlist[j] = 1;
+	primenum[++tos] = 2;
+	for (register long num = 3; num <= N; num=num+2) {
+		if (!numlist[num]) {
+			primenum[++tos] = num;
+
+			for (register long j = num * num; j <= N; j = j + 2*num) {
+				numlist[j] = true;
+			}
+		}
+	}
+	/*
+	for (int num = 2; num <= sqrt(N); num++) { // sieve of eratosthenes
+		if (numlist[num] == 0) {
+			primenum[++tos] = num;
+
+			for (int j = num * num; j <= N; j = j + num) {
+				numlist[j] = 1;
+			}
 		}
 	}
 	for (int num = sqrt(N)+1; num <= N; num++) {
 		if (numlist[num] == 0) primenum[++tos] = num;
 	}
-
+	*/
 	long long result = 0;
 
 	/*
