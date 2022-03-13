@@ -23,6 +23,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Fininsh_Algorithm", "Finins
 		AlgorithmStudy\1644.cpp = AlgorithmStudy\1644.cpp
 		AlgorithmStudy\1647_unionset and kruskal.cpp = AlgorithmStudy\1647_unionset and kruskal.cpp
 		AlgorithmStudy\1647_unionset.cpp = AlgorithmStudy\1647_unionset.cpp
+		AlgorithmStudy\1766_topological_sort.cpp = AlgorithmStudy\1766_topological_sort.cpp
 		AlgorithmStudy\2133.cpp = AlgorithmStudy\2133.cpp
 		AlgorithmStudy\primenumber.cpp = AlgorithmStudy\primenumber.cpp
 		AlgorithmStudy\stack_test.cpp = AlgorithmStudy\stack_test.cpp
