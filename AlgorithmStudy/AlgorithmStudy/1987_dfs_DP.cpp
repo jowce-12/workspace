@@ -4,8 +4,6 @@
 #define MAX 21
 char map[MAX][MAX];
 int DP[MAX][MAX];
-int alphabet[100];
-
 
 int R, C, resultMoveCnt = 0;
 
